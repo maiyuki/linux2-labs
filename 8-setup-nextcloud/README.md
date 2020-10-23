@@ -1,10 +1,10 @@
-# Lab 8 - Setting up Netcloud
+# Lab 8 - Setting up Nextcloud
 
 ## Objectives
 
 Set up a functional Nextcloud Server in a VM and install Nextcloud Client on your computer (not in a VM). Connect to the Server with the Client.
 
-## Prerequisite
+## Prerequisites
 
 CentOS 8
 PHP 7.4
