@@ -26,7 +26,7 @@ Creates two VM:
 
 ## TODO
 
-### Run Vagrantfile
+### Run Vagrantfile to setup two VM
 
 - Run Vagrantfile to kick-off two machines VirtualBox
 
@@ -61,6 +61,8 @@ vagrant help # The help command is very helpful and easy to understand
 ```
 
 ## Answers
+
+### Run Vagrantfile to setup two VM
 
 - Run Vagrantfile to kick-off two machines VirtualBox
 
