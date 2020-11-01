@@ -9,7 +9,6 @@ These are individual labs in a group. You do the labs on your local machine and 
 - VirtualBox (https://www.virtualbox.org/wiki/Downloads)
 - Vagrant (https://www.vagrantup.com/downloads)
 
-
 ## Labs
 
 - 1 - Basic networking
