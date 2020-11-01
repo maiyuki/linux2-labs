@@ -1,35 +1,24 @@
-# Linux 2 - Networking
+# Labs
 
 ## Description
 
 This repository contains labs which are part of educational material for course **Linux 2 - Networking**.
 
-## Prerequisites
-
-- VirtualBox (https://www.virtualbox.org/wiki/Downloads)
-- Vagrant (https://www.vagrantup.com/downloads)
-- Git
-
 ## Labs
 
-0 - Basic networking
+### Networking
 
-1 - Getting started with  Vagrant
+- 1-basic-networking
 
-2 - NTP
+### Vagrant
 
-3 - DNS
+- 1-getting-started-with-vagrant
 
-4 - DHCP
+## Software
 
-5 - NFS
+- Network toolbox
 
-6 - SAMBA
-
-7 - Troubleshooting
-
-8 - Setup Nextcloud
-
+- Vagrant
 
 ## Help with the labs
 
@@ -41,7 +30,7 @@ If you get stuck? No worries. Here are some suggestions on how to solve it.
 
 - Use man pages
 
-- Send us an e-mail and describe to me;
+- Send us an e-mail and describe;
     - what are you trying to accomplish
     - what/how have you tried and
     - what errors to you get
