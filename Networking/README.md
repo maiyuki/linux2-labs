@@ -1,4 +1,4 @@
-# Linux 2 - labs
+# Linux 2 - Networking
 
 ## Description
 

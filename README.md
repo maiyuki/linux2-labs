@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains labs which are part of educational material for course **Linux 2 - Networking**.
+This repository contains labs which are part of educational material for course **Linux 2**.
 
 ## Labs
 
