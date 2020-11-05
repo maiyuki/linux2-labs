@@ -14,10 +14,15 @@ Recap basic networking commands
 
 ## Software
 ping
+
 hostname
+
 ip / ifconfig
+
 tracepath / traceroute
+
 ss / netstat
+
 nmncli
 
 ## Vagrant
