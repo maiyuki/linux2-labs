@@ -13,16 +13,18 @@ These are individual labs in a group. You do the labs on your local machine and 
 
 - 1 - Basic networking
 
-- 2 - NTP
+- 2 - Firewall
 
-- 3 - DNS
+- 3 - NTP
 
-- 4 - DHCP
+- 4 - DNS
 
-- 5 - NFS
+- 5 - DHCP
 
-- 6 - SAMBA
+- 6 - NFS
 
-- 7 - Troubleshooting
+- 7 - SAMBA
 
-- 8 - Setup Nextcloud
+- 8 - Troubleshooting
+
+- 9 - Setup Nextcloud
