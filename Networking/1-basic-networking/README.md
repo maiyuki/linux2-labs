@@ -27,7 +27,9 @@ nmncli
 
 ## Vagrant
 
---
+Creates a VM
+
+`client01 172.22.100.20`
 
 ## TODO
 
