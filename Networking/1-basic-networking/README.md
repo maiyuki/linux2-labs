@@ -13,6 +13,7 @@ Basic Linux 1 knowledge
 Recap basic networking commands
 
 ## Software
+
 ping
 
 hostname
@@ -70,7 +71,6 @@ IP4.DOMAIN
 - Show device status
 
 - Display the settings for `eth0` device
-
 
 ### Configure hostnames and name resolution
 
