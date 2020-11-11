@@ -4,10 +4,21 @@
 
 These are individual labs in a group. You do the labs on your local machine and help each other.
 
+### NOTE! *Remember to always destroy your Vagrant machines after each lab!*
+
 ## Prerequisites
 
 - VirtualBox (https://www.virtualbox.org/wiki/Downloads)
 - Vagrant (https://www.vagrantup.com/downloads)
+
+## Vagrant
+
+To kick off and access the VMs
+
+```bash
+vagrant up
+vagrant ssh <the VM>
+```
 
 ## Labs
 

@@ -1,4 +1,4 @@
-# Labs
+# Linux 2 Labs
 
 ## Description
 
@@ -9,6 +9,8 @@ This repository contains labs which are part of educational material for course 
 ### Networking
 
 - 1-basic-networking
+- 2-firewall
+- 3-ntp
 
 ### Vagrant
 
@@ -34,5 +36,3 @@ If you get stuck? No worries. Here are some suggestions on how to solve it.
     - what are you trying to accomplish
     - what/how have you tried and
     - what errors to you get
-
-- Super urgent? Call.
