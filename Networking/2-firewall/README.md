@@ -95,7 +95,7 @@ dnf repolist --enabled
 firewalld
 ```
 
-## Answers / Guided
+## Answers / Guide
 
 ### Limiting Network Communication
 

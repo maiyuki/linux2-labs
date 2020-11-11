@@ -37,6 +37,38 @@ dnf repolist --enabled
 
 - Install Chrony NTP:
 
+- Enable chrony to start after boot:
+
+- Set Chrony to act as an NTP server for the local network. Edit file `/etc/chrony.conf`
+
+- Restart Chrony NTP daemon to apply the changes
+
+- Open firewall port to allow for incoming NTP requests
+
+- Check chrony sources
+
+### Install `client01`
+
+- Confirm your NTP server configuration by manual time sync from `client01`. Use `ntpdate`.
+
+- SSH into `client01` and repeat all steps from `Install server01`, EXCEPT setting Chrony to act like a server.
+
+- Turn Chronyc into a NTP client by pointing to NTP server in file `/etc/chrony.conf`
+
+- Restart Chrony NTP daemon to apply the changes
+
+- Check for NTP server sources. Your local NTP server should be listed
+
+### `server01`
+
+- SSH into ntp server and list the ntp clients
+
+## Answers / Guide
+
+### Install `server01`
+
+- Install Chrony NTP:
+
 ```bash
 dnf install chrony
 ```

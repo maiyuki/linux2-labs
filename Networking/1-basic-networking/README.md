@@ -154,7 +154,7 @@ ss
 netstat
 ```
 
-## Answers / Guided
+## Answers / Guide
 
 ### Examining Network Configuration
 
