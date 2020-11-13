@@ -38,11 +38,12 @@ dnf repolist --enabled
 
 #### Install packages
 
--  Install bind and bind-utils package
+- Install bind and bind-utils package
 
 ```bash
 dnf install bind bind-utils
 ```
+
 - Start DNS Server
 
 ```bash
