@@ -1,4 +1,4 @@
-# Lab 2 - NTP
+# Lab - NTP
 
 ## Description
 
@@ -33,7 +33,7 @@ dnf repolist --enabled
 
 ## TODO
 
-### Install `server01`
+### Install NTP server
 
 - Install Chrony NTP:
 
@@ -47,7 +47,7 @@ dnf repolist --enabled
 
 - Check chrony sources
 
-### Install `client01`
+### Install NTP client
 
 - Confirm your NTP server configuration by manual time sync from `client01`. Use `ntpdate`.
 
@@ -65,7 +65,7 @@ dnf repolist --enabled
 
 ## Answers / Guide
 
-### Install `server01`
+### Install NTP server
 
 - Install Chrony NTP:
 
@@ -99,23 +99,24 @@ firewall-cmd --permanent --add-service=ntp
 firewall-cmd --reload
 ```
 
-- Check chrony sources
+- Check chrony sources (you might see different sources)
 
 ```bash
 chronyc sources
+...
+Output (example)
 
-Output
+210 Number of sources = 4
+MS Name/IP address         Stratum Poll Reach LastRx Last sample
+===============================================================================
+^+ ntp6.flashdance.cx            2   6    17    18  -1816us[-2053us] +/-   38ms
+^* ntp-d.0x5e.se                 2   6    17    17   +878us[ +641us] +/-   28ms
+^+ ntp3.flashdance.cx            2   6    17    18    +49us[ -188us] +/-   45ms
+^? ntp-c.0x5e.se                 0   6     0     -     +0ns[   +0ns] +/-    0ns
 
-**TODO**
 ```
 
-### Install `client01`
-
-- Confirm your NTP server configuration by manual time sync from `client01`. Use `ntpdate`.
-
-```bash
-ntpdate 172.22.100.10
-```
+### Install NTP client
 
 - SSH into `client01` and repeat all steps from `Install server01`, EXCEPT setting Chrony to act like a server.
 
@@ -137,9 +138,16 @@ systemctl restart chronyd
 
 ```bash
 chronyc sources
+...
+Output (example)
+210 Number of sources = 5
+MS Name/IP address         Stratum Poll Reach LastRx Last sample
+===============================================================================
+^? 172.22.100.10                 0   6     0     -     +0ns[   +0ns] +/-    0ns
+...
 ```
 
-### `server01`
+### NTP server
 
 - SSH into ntp server and list the ntp clients
 
