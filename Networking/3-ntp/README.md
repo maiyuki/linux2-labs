@@ -12,7 +12,6 @@ none
 
 - Setup an NTP server on `server01`
 - Configure `client01` to sync its time to `server01`
-- Configure NTP with `timedatectl`on `client01` **TODO**
 
 ## Software
 
@@ -23,13 +22,6 @@ chrony (chrony)
 Creates two VMs
 `server01 172.22.100.10`
 `client01 172.22.100.20`
-
-## Always start with update in a new machine
-
-```bash
-dnf makecache
-dnf repolist --enabled
-```
 
 ## TODO
 
@@ -59,7 +51,7 @@ dnf repolist --enabled
 
 - Check for NTP server sources. Your local NTP server should be listed
 
-### `server01`
+### Verify connection on NTP server
 
 - SSH into ntp server and list the ntp clients
 
@@ -138,8 +130,9 @@ systemctl restart chronyd
 
 ```bash
 chronyc sources
-...
-Output (example)
+
+Output (example):
+
 210 Number of sources = 5
 MS Name/IP address         Stratum Poll Reach LastRx Last sample
 ===============================================================================
@@ -147,17 +140,26 @@ MS Name/IP address         Stratum Poll Reach LastRx Last sample
 ...
 ```
 
-### NTP server
+### Verify connection on NTP server
 
 - SSH into ntp server and list the ntp clients
 
+*(It might take some time for it to sync)*
+
 ```bash
 chronyc clients
+
+Outupt:
+
+Hostname                      NTP   Drop Int IntL Last     Cmd   Drop Int  Last
+===============================================================================
+172.22.100.20                   5      0   6   -    64       0      0   -     -
 ```
 
 ## Extra
 
 - Add client02 to sync with the server
+- Set Time, Timezone and Synchronize System Clock `timedatectl`on `client01`
 
 ## Link
 

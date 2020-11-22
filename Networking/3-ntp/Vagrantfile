@@ -16,6 +16,10 @@ Vagrant.configure("2") do |config|
   config.vm.define "server01" do |server|
       server.vm.hostname = "server01.task.local"
       server.vm.network :private_network, ip: "172.22.100.10"
-      config.vm.network "forwarded_port", guest: 80, host: 8080
+  end
+
+  config.vm.define "client01" do |client|
+      client.vm.hostname = "client01.task.local"
+      client.vm.network :private_network, ip: "172.22.100.20"
   end
 end

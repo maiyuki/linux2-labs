@@ -20,14 +20,7 @@ firewalld
 
 Creates a VM
 
-`client01 172.22.100.20`
-
-## Always start with update in a new machine
-
-```bash
-dnf makecache
-dnf repolist --enabled
-```
+`server01 172.22.100.10`
 
 ## TODO
 

@@ -30,7 +30,7 @@ nmncli
 
 Creates a VM
 
-`client01 172.22.100.20`
+`server01 172.22.100.10`
 
 ## Always start with update in a new machine
 
