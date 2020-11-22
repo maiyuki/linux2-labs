@@ -31,6 +31,12 @@ Creates two VMs
 
 #### Install packages
 
+- Download and cache in binary format metadata for all known repos
+
+```bash
+sudo dnf makecache
+```
+
 - Install bind and bind-utils package
 
 ```bash
