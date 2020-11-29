@@ -1,0 +1,25 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/8"
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+  # config.vm.provision "shell", path: "../scripts/01-bootstrap.sh"
+
+  config.vm.provider :virtualbox do |v|
+      v.memory = 512
+      v.linked_clone = true
+      v.check_guest_additions = false
+      v.customize ["modifyvm", :id, "--cpuexecutioncap", "25"]
+  end
+
+  config.vm.define "server01" do |server|
+      server.vm.hostname = "server01.local"
+      server.vm.network :private_network, ip: "172.22.100.10"
+  end
+
+  config.vm.define "client01" do |client|
+      client.vm.hostname = "client01.local"
+      client.vm.network :private_network, ip: "172.22.100.20"
+  end
+end
