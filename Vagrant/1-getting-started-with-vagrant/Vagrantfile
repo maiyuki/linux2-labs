@@ -14,12 +14,12 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "server01" do |server|
-      server.vm.hostname = "server01.task.local"
+      server.vm.hostname = "server01.local"
       server.vm.network :private_network, ip: "172.22.100.10"
   end
 
   config.vm.define "client01" do |client|
-      client.vm.hostname = "client01.task.local"
+      client.vm.hostname = "client01.local"
       client.vm.network :private_network, ip: "172.22.100.20"
   end
 end
