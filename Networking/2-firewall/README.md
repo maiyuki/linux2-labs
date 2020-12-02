@@ -99,25 +99,25 @@ firewalld
 - Verify that `firewalld` is running
 
 ```bash
-sudo firewall-cmd --state
+firewall-cmd --state
 ```
 
 - If not, enable `firewalld`
 
 ```bash
-sudo systemctl status firewalld
+systemctl status firewalld
 ```
 
 - Start `firewalld`
 
 ```bash
-sudo systemctl start firewalld
+systemctl start firewalld
 ```
 
 - Again, verify that `firewalld` is running
 
 ```bash
-sudo systemctl status firewalld
+systemctl status firewalld
 ```
 
 ##### Current Firewall Rules
@@ -139,7 +139,7 @@ firewall-cmd --get-active-zones
 - List all configuration applied to the zone
 
 ```bash
-sudo firewall-cmd --list-all
+firewall-cmd --list-all
 ```
 
 *Other zones*
@@ -154,7 +154,7 @@ firewall-cmd --get-zones
 - List all configuration applied to the `home` zone
 
 ```bash
-sudo firewall-cmd --zone=home --list-all
+firewall-cmd --zone=home --list-all
 ```
 
 #### Selecting Zones for your Interfaces
@@ -162,7 +162,7 @@ sudo firewall-cmd --zone=home --list-all
 - As you can see, the default zone has `eth0` configured on the `interfaces`. Let's move it `eth0` to zone `home` `interfaces`
 
 ```bash
-sudo firewall-cmd --zone=home --change-interface=eth0
+firewall-cmd --zone=home --change-interface=eth0
 ```
 
 - Verify this by listing the active zones again
@@ -174,7 +174,7 @@ firewall-cmd --get-active-zones
 - Change default zone to home
 
 ```bash
-sudo firewall-cmd --set-default-zone=home
+firewall-cmd --set-default-zone=home
 ```
 
 - Verify that it has been changed
@@ -202,25 +202,25 @@ less /usr/lib/firewalld/services/http.xml
 - Add `http` to the `public` zone
 
 ```bash
-sudo firewall-cmd --zone=public --add-service=http
+firewall-cmd --zone=public --add-service=http
 ```
 
 - Verify it was successful added
 
 ```bash
-sudo firewall-cmd --zone=public --list-services
+firewall-cmd --zone=public --list-services
 ```
 
 - Add `http` permanent to the `public` zone so that it still will be available after a reboot
 
 ```bash
-sudo firewall-cmd --zone=public --add-service=http --permanent
+firewall-cmd --zone=public --add-service=http --permanent
 ```
 
 - Verify it was successful added, permanent
 
 ```bash
-sudo firewall-cmd --zone=public --list-services --permanent
+firewall-cmd --zone=public --list-services --permanent
 ```
 
 ## Extra
