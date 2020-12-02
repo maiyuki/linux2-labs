@@ -2,7 +2,7 @@
 
 ## Description
 
-FIrewall is a important part in the Linux system and also a knowledge that will make your life easier if it say rock solid in the tip of your fingers.
+Firewall is a important part in the Linux system and also a knowledge that will make your life easier if it say rock solid in the tip of your fingers.
 
 ## Prerequisites
 
@@ -56,7 +56,7 @@ Creates a VM
 
 #### Selecting Zones for your Interfaces
 
-- As you can see, the default zone has `eth0` configured on the `interfaces`. Let's move it `eth0` to zone `home` `interfaces`
+- As you can see, the default zone has `eth1` configured on the `interfaces`. Let's move it `eth1` to zone `home` `interfaces`
 
 - Verify this by listing the active zones again
 
@@ -159,10 +159,10 @@ firewall-cmd --zone=home --list-all
 
 #### Selecting Zones for your Interfaces
 
-- As you can see, the default zone has `eth0` configured on the `interfaces`. Let's move it `eth0` to zone `home` `interfaces`
+- As you can see, the default zone has `eth1` configured on the `interfaces`. Let's move it `eth1` to zone `home` `interfaces`
 
 ```bash
-firewall-cmd --zone=home --change-interface=eth0
+firewall-cmd --zone=home --change-interface=eth1
 ```
 
 - Verify this by listing the active zones again
