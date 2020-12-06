@@ -11,6 +11,11 @@ This repository contains labs which are part of educational material for course 
 - 1-basic-networking
 - 2-firewall
 - 3-ntp
+- 4-dns
+- 5-dhcp
+- 6-nfs
+- 7-samba
+- 8-troubleshooting
 
 ### Vagrant
 

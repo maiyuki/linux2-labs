@@ -37,5 +37,3 @@ vagrant ssh <the VM>
 - 7 - SAMBA
 
 - 8 - Troubleshooting
-
-- 9 - Setup Nextcloud
