@@ -306,6 +306,10 @@ $TTL 86400
      86400 ;Minimum TTL
 )
 
+;Name Server Information
+@ IN NS my-dns.server01.local.
+my-dns     IN      A       172.22.100.10
+
 ;Reverse lookup for Name Server
 10      IN      PTR     my-dns.server01.local.
 
