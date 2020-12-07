@@ -115,8 +115,8 @@ $TTL 86400
      604800 ;Expire
      86400 ;Minimum TTL
 )
-;Name Server Information
-@ IN NS my-dns.server01.local.
+;Name Server Information	
+@ IN NS my-dns.server01.local.	
 my-dns     IN      A       172.22.100.10
 
 ;Reverse lookup for Name Server
