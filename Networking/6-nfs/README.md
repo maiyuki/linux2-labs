@@ -85,10 +85,11 @@ mkdir -p  /srv/nfs_shares/{docs,backups}
 touch /srv/nfs_shares/{docs,backups}/test_file.txt
 ```
 
-- Set owner to `nobody` This is to avoid encountering any permission issues from the client systems
+- Set owner to `nobody` and full permission too all. This is to avoid encountering any permission issues from the client systems
 
 ```bash
 chown -R nobody: /srv/nfs_shares/{docs,backups}
+chmod 777 /srv/nfs_shares/{docs,backups}
 ```
 
 - Restart NFS daemon
