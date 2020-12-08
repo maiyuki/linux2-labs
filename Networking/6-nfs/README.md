@@ -246,7 +246,7 @@ ls -l /mnt/nfs_shares/docs
 ## Extra
 
 - Configure `client02` like `client01` but remember to mount the `backups` also
-- You can controll access with IP and file permissons. Play around with it. You can change IP, create users and set file permissions.
+- You can control access with IP and file permissions. Play around with it. You can change IP, create users, and set file permissions.
 
 ## Link
 
