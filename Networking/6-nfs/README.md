@@ -121,9 +121,13 @@ exportfs  -s
 From `man exports`:
 
 **rw** – allows both read and write access on the file system.
+
 **sync** – tells the NFS server to write operations (writing information to the disk) when requested (applies by default).
+
 **all_squash** – maps all UIDs and GIDs from client requests to the anonymous user.
+
 **no_all_squash** – used to map all UIDs and GIDs from client requests to identical UIDs and GIDs on the NFS server.
+
 **root_squash** – maps requests from root user or UID/GID 0 from the client to the anonymous UID/GID.
 
 #### Configure firewall
