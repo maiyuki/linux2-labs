@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "client02" do |client|
-    client.vm.hostname = "client01.local"
+    client.vm.hostname = "client02.local"
     client.vm.network :private_network, ip: "172.22.100.30"
   end
 end

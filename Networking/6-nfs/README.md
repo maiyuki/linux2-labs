@@ -87,7 +87,6 @@ Configuration files for the NFS server:
 
 - Download and cache in binary format metadata for all known repos
 
-
 - Install `nfs-utils` and `nfs4-acl-tools`
 
 - Use `showmount` command to show mount information for the NFS server
@@ -281,19 +280,19 @@ showmount -e 172.22.100.10
 mkdir -p /mnt/{docs,backups}
 ```
 
-- Mount `/mnt/nfs_shares/docs` as an nfs file system
+- Mount `/srv/nfs_shares/docs` as an nfs file system
 
 ```bash
 mount -t nfs  172.22.100.10:/srv/nfs_shares/docs /mnt/docs
 ```
 
-- Try and mount `mnt/nfs_shares/backups`. It will fail due to it being only accessible on `client02`
+- Try and mount `/srv/nfs_shares/backups`. It will fail due to it being only accessible on `client02`
 
 ```bash
-mount -t nfs  172.22.100.10:/mnt/nfs_shares/backups /mnt/backups
+mount -t nfs  172.22.100.10:/srv/nfs_shares/backups /mnt/backups
 
 Output:
-mount.nfs: mounting 172.22.100.10:/mnt/nfs_shares/backups failed, reason given by server: No such file or directory
+mount.nfs: mounting 172.22.100.10:/srv/nfs_shares/backups failed, reason given by server: No such file or directory
 ```
 
 - Confirm that the remote file system has been mounted by running
@@ -305,7 +304,7 @@ mount | grep nfs
 - Enable persistent mount after reboot
 
 ```bash
-echo "172.22.100.10:/mnt/nfs_shares/docs   /mnt/docs  nfs     defaults 0 0">>/etc/fstab
+echo "172.22.100.10:/srv/nfs_shares/docs   /mnt/docs  nfs     defaults 0 0">>/etc/fstab
 ```
 
 - Verify that `test_file.txt` exist in `/mnt/docs`
