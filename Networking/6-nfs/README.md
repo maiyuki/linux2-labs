@@ -322,10 +322,10 @@ touch /mnt/docs/from_client.txt
 
 #### Verify created file on NFS Server
 
-- Lookin to the `/mnt/nfs_shares/docs` to verify that the `from_client.txt` from client has been added
+- Lookin to the `/srv/nfs_shares/docs` to verify that the `from_client.txt` from client has been added
 
 ```bash
-ls -l /mnt/nfs_shares/docs
+ls -l /srv/nfs_shares/docs
 ```
 
 ## Extra
