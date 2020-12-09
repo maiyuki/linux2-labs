@@ -35,6 +35,91 @@ Creates three VMs
 
 - Download and cache in binary format metadata for all known repos
 
+- Install `nfs-utils` package
+
+- Start nfs server service
+
+- Enable it to automatically start at system boot
+
+- Verify its status
+
+The services that are required for running an NFS server or mounting NFS shares: **nfsd**, **nfs-idmapd**, **rpcbind**, **rpc.mountd**, **lockd**, **rpc.statd**, **rpc.rquotad**, and **rpc.idmapd** will be automatically started
+
+Configuration files for the NFS server:
+
+**/etc/nfs.conf** - main configuration file for the NFS daemons and tools
+
+**/etc/nfsmount.conf** - an NFS mount configuration file
+
+#### Create NFS shares
+
+- Create shares `/srv/nfs_shares/{docs,backups}`
+
+- Add content in the directories
+
+- Set owner to `nobody` and full permission too all. This is to avoid encountering any permission issues from the client systems
+
+- Restart NFS daemon
+
+#### Export NFS shares
+
+- Export created files in NFS server `/etc/exports` configuration file.
+
+- Run `exportfs` command with the `-a` flag means export or unexport all directories, `-r` means reexport all directories, synchronizing `/var/lib/nfs/`etab with /etc/exports and files under `/etc/exports.d`, and `-v` enables verbose output
+
+- Display the current export list. Some of the default exports options that are not explicitly defined will be shown
+
+#### Configure firewall
+
+- Enable firewalld
+
+- Start firewalld
+
+- Check the status of firewalld
+
+- Allow access to the NFS services `mountd`, `nfs` and `rpc-bind`
+
+- Reload for the changes to take effect
+
+### Setup NFS Client
+
+#### Install NFS client
+
+- Download and cache in binary format metadata for all known repos
+
+
+- Install `nfs-utils` and `nfs4-acl-tools`
+
+- Use `showmount` command to show mount information for the NFS server
+
+#### Mount NFS server
+
+- Create a mounting directory to mount the remote NFS file system
+
+- Mount `/mnt/nfs_shares/docs` as an nfs file system
+
+- Try and mount `mnt/nfs_shares/backups`. It will fail due to it being only accessible on `client02`
+
+- Confirm that the remote file system has been mounted by running
+
+- Enable persistent mount after reboot
+
+- Verify that `test_file.txt` exist in `/mnt/docs`
+
+- Create a file in `/mnt/docs`
+
+#### Verify created file on NFS Server
+
+- Lookin to the `/mnt/nfs_shares/docs` to verify that the `from_client.txt` from client has been added
+
+## Guide / answers
+
+### Setup NFS Server
+
+#### Install NFS
+
+- Download and cache in binary format metadata for all known repos
+
 ```bash
 dnf makecache
 ```
@@ -235,7 +320,7 @@ ls -l /mnt/docs
 touch /mnt/docs/from_client.txt
 ```
 
-### Verify created file on NFS Server
+#### Verify created file on NFS Server
 
 - Lookin to the `/mnt/nfs_shares/docs` to verify that the `from_client.txt` from client has been added
 
