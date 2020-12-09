@@ -95,9 +95,9 @@ Configuration files for the NFS server:
 
 - Create a mounting directory to mount the remote NFS file system
 
-- Mount `/mnt/nfs_shares/docs` as an nfs file system
+- Mount `/srv/nfs_shares/docs` as an nfs file system
 
-- Try and mount `mnt/nfs_shares/backups`. It will fail due to it being only accessible on `client02`
+- Try and mount `/srv/nfs_shares/backups`. It will fail due to it being only accessible on `client02`
 
 - Confirm that the remote file system has been mounted by running
 
@@ -109,7 +109,7 @@ Configuration files for the NFS server:
 
 #### Verify created file on NFS Server
 
-- Lookin to the `/mnt/nfs_shares/docs` to verify that the `from_client.txt` from client has been added
+- Looking to the `/mnt/nfs_shares/docs` to verify that the `from_client.txt` from client has been added
 
 ## Guide / answers
 
