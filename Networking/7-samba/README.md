@@ -12,7 +12,7 @@ none
 
 - Set up a SAMBA server on `server01`
 - Manual mount file system to `client01`
-- Automount file system to `client01`
+- Automount file system to `client02`
 
 ## Software
 
@@ -25,7 +25,7 @@ Network: `172.22.100.0/24`
 Creates three VMs
 `server01 172.22.100.10`
 `client01 172.22.100.20`
-`client01 172.22.100.30`
+`client02 172.22.100.30`
 
 ## TODO
 
