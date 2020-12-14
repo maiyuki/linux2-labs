@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve flaskapp
+After=network.target
+
+[Service]
+User=vagrant
+Group=nginx
+WorkingDirectory=/opt/app
+Environment="PATH=/usr/local/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin"
+ExecStart=/usr/local/bin/uwsgi --ini app.ini
+
+[Install]
+WantedBy=multi-user.target
