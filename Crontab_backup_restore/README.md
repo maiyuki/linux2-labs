@@ -487,6 +487,8 @@ mysql> SHOW TABLES;
 
 ## Extra
 
+- Add a backup user and let the user do the backup instead of the root user
+
 - There is a `bs01` comment out in Vagrant, use that machine to make a backup to a remote machine
 
 - Continue with the restore script. Change so that before it does a restore
