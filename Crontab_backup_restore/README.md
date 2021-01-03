@@ -436,7 +436,6 @@ if [ ! -z $ARG ]; then
   if [ ! -z "$EXIST" ]; then
 
     echo $EXIST
-    mysqldump --defaults-extra-file=~/.mysql/mysql.cnf bookstore > $FILENAME
     mysql -u root -p bookstore < $FILENAME
 
   fi
