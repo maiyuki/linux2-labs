@@ -37,7 +37,7 @@ Scenario 1 - Static Log Analysis. Starting simple!
 Imagine, you've recently started working at Evil Corp.
 
 Boss comes to you, asking you to take a look at the "vm01", he says there's some webserver logs an application stores there.
-He gives you the location: `/mnt/logs/access-vm02-2021-01-03.log.gz`
+He gives you the location: `/vagrant/files/logs/access-vm02-2021-01-03.log.gz`
 
 You asked for more details however, he couldn't provide any, it's a super old server, no one really knows how those logs show up there.
 
@@ -61,13 +61,13 @@ He again asks you to take a look at "vm01", apparently that server gets a lot of
 He asks if there's something you can do about it, possibly automating writing a simple report of each IP and how many requests it made and based on that information he'll make the decision whom to block, apparently a lot of users are making incorrect password attempts and he doesn't want false positive lock outs!
 He gives you the location of the SSH log files and asks to write the automation in Bash (but anything else is acceptable too)
 
-Log location: `/mnt/ssh/ssh-2021-01-04.log.gz`
+Log location: `/vagrant/files/ssh/ssh-2021-01-04.log.gz`
 
 Your tasks:
  - Create a script that analysis the example SSH log and provides the following statistics:
    - All unique IPs with number or failed login attempts
    - List of IPs that crossed a preset threshold (must be easily configurable). For our purposes let's set the threshold to 15 failed attempts
-   - Save the output of the script to a separate folder in `/mnt/ssh/`, in the following format:` ssh-attempt-YYYY-MM-DD.txt.gz`
+   - Save the output of the script to a separate folder in `/vagrant/files/ssh/`, in the following format:` ssh-attempt-YYYY-MM-DD.txt.gz`
    - Output of the script *MUST* be gzipped
 
 NOTE! : If you want to add an emailing function to the script or anything else additional, feel free! Let your creativity shine :)
@@ -82,7 +82,7 @@ Your boss comes to you, with his final challenge. They have a black box applicat
 Yesterday it suddenly stopped working, how do they know, because the whole company depends on it, it seems. It's the backend authentication service that the email server uses, yikes! :)
 You're tasked to figure out as much as you can about the application and why it no longer works, all from a log file.
 
-Log location: `/mnt/auth/auth_2021-01-04.log.zip`
+Log location: `/vagrant/files/auth/auth_2021-01-04.log.zip`
 
 Your tasks: 
  - Figure out what the application is running on (language it's written in, framework used, version, etc.)
