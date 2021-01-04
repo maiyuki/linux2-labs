@@ -5,7 +5,7 @@ ENV["LC_ALL"] = "en_US.UTF-8"
 
 Vagrant.configure("2") do |config|
     config.vm.box = "centos/8"
-    config.vm.synced_folder ".", "/vagrant", disabled: true
+    config.vm.synced_folder ".", "/vagrant", disabled: false
 
     config.vm.provider :virtualbox do |v|
         v.memory = 512
@@ -17,6 +17,5 @@ Vagrant.configure("2") do |config|
     config.vm.define "vm01" do |server|
         server.vm.hostname = "vm01.local"
         server.vm.network :private_network, ip: "172.22.100.10", virtualbox__intnet: "troubleshoot_logs"
-        server.vm.provision "file", source: "files", destination: "/mnt"
     end
 end
